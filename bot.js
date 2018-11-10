@@ -1,6 +1,6 @@
 const Discord = require("discord.js");
 const client = new Discord.Client();
-var prefix = "+";
+var prefix = ".";
 client.on('ready', () => {
    console.log(`----------------`);
       console.log(`Desert Bot- Script By : EX Clan`);
@@ -8,13 +8,13 @@ client.on('ready', () => {
       console.log(`ON ${client.guilds.size} Servers '     Script By : EX Clan ' `);
     console.log(`----------------`);
   console.log(`Logged in as ${client.user.tag}!`);
-client.user.setGame(`Death Shop`,"http://twitch.tv/Death Shop")
+client.user.setGame(`OBX System ,`,"http://twitch.tv/akrame35")
 client.user.setStatus("dnd")
 });
 
 client.on("message", async message => {
         if(!message.channel.guild) return;
- var prefix= "+";
+ var prefix= ".";
         if(message.content.startsWith(prefix + 'server')) {
         let guild = message.guild
         let channel = message.channel
@@ -48,7 +48,7 @@ client.on("message", async message => {
     });
 
 client.on('message', function(message) {
-    if (message.content == "+clear") {
+    if (message.content == ".clear") {
         if (message.member.hasPermission("MANAGE_MESSAGES")) {
             message.channel.fetchMessages()
                .then(function(list){
@@ -60,7 +60,7 @@ client.on('message', function(message) {
 });
 	
   client.on('message', message => {
-    if (message.content.startsWith("+link")) {
+    if (message.content.startsWith(".رابط")) {
 
   message.channel.createInvite({
         thing: true,
@@ -72,7 +72,7 @@ client.on('message', function(message) {
   message.channel.send("**تم ارسال الرابط برسالة خاصة**")
 
 message.author.send(`**مدة الرابط : يـوم
-دد استخدامات الرابط : 25**`)
+عدد استخدامات الرابط : 25**`)
 
     }
 });
@@ -80,7 +80,7 @@ message.author.send(`**مدة الرابط : يـوم
 
 client.on('message', message => {
 
-    if (message.content === "+mc") {
+    if (message.content === ".mc") {
                         if(!message.channel.guild) return message.reply(' هذا الامر فقط للسيرفرات !!');
 
 if(!message.member.hasPermission('MANAGE_MESSAGES')) return message.reply(' ليس لديك صلاحيات');
@@ -91,7 +91,7 @@ if(!message.member.hasPermission('MANAGE_MESSAGES')) return message.reply(' لي
                message.reply("تم تقفيل الشات ? ")
            });
              }
-if (message.content === "+umc") {
+if (message.content === ".umc") {
     if(!message.channel.guild) return message.reply(' هذا الامر فقط للسيرفرات !!');
 
 if(!message.member.hasPermission('MANAGE_MESSAGES')) return message.reply('ليس لديك صلاحيات');
@@ -108,7 +108,7 @@ if(!message.member.hasPermission('MANAGE_MESSAGES')) return message.reply('لي�
 });
 
 client.on('message', message => {
-const prefix = "+";
+const prefix = ".";
   if (message.author.kick) return;
   if (!message.content.startsWith(prefix)) return;
 
